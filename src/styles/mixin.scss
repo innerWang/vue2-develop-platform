@@ -1,0 +1,75 @@
+@mixin longText {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@mixin detailLayout {
+  li {
+    display: flex;
+    margin-bottom: 0.1rem;
+    font-size: 0.16rem;
+    > label {
+      flex-shrink: 0;
+      width: 1.3rem;
+      color: rgba($color: #888, $alpha: 0.8);
+      text-align: right;
+      &::after {
+        content: '：';
+      }
+    }
+    > div {
+      flex-grow: 1;
+      @include longText;
+    }
+  }
+}
+
+@mixin whiteBgBox {
+  padding: 0.24rem 0.32rem;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+@mixin searchToolbar {
+  display: flex;
+  justify-content: space-between;
+
+  &-searchGroups {
+    display: flex;
+    > div {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 0.28rem;
+      }
+
+      label {
+        flex-shrink: 0;
+        &::after {
+          content: '：';
+        }
+      }
+    }
+  }
+
+  &-btns {
+    flex-shrink: 0;
+    margin-left: 0.24rem;
+    button:not(:last-child) {
+      margin-right: 0.12rem;
+    }
+  }
+
+  :global {
+    .ant-input,
+    .ant-select {
+      width: 1.8rem;
+    }
+
+    .ant-calendar-picker-input.ant-input {
+      width: 100%;
+    }
+  }
+}

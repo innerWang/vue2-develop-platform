@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 625%;
+}
+
+body {
+  font-family: 'Microsoft YaHei', '微软雅黑', 'PingFangSC-Regular', sans-serif;
+  font-size: 0.16rem;
+  min-width: 14.4rem;
+  background-color: #f7f8fb;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
